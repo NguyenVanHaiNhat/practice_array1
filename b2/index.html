@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 8, 6, 7, 9];
+    let max = 0;
+    let index = -1;
+    for (let i = 0; i < arr.length; i++) {
+        max = arr[i];
+        index = i;
+        if (arr[i] > max){
+            max = arr[i];
+
+        }
+    }
+    document.write("giá trị lớn nhất trong mảng là " + max + " nằm ở phần tử thứ : " + index);
+</script>
+</body>
+</html>

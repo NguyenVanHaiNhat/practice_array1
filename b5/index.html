@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<script>
+    function demNguyenAm(chuoi) {
+        // Chuyển đổi chuỗi thành chữ thường để so sánh dễ dàng hơn
+        chuoi = chuoi.toLowerCase();
+
+        // Khởi tạo biến đếm
+        let dem = 0;
+
+        // Duyệt qua từng ký tự trong chuỗi
+        for (let i = 0; i < chuoi.length; i++) {
+            // Kiểm tra xem ký tự có phải là nguyên âm hay không
+            if ("aeiou".includes(chuoi[i])) {
+                dem++;
+            }
+        }
+
+        return dem;
+    }
+
+    // Nhập chuỗi từ người dùng
+    let chuoiInput = prompt("Nhập vào một chuỗi: ");
+
+    // Gọi hàm đếm và in kết quả
+    let soNguyenAm = demNguyenAm(chuoiInput);
+    document.write(`Số lượng nguyên âm trong chuỗi là: ${soNguyenAm}`);
+</script>
+</body>
+</html>

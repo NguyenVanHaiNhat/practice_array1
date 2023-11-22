@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function bubbleSort(arr) {
+        var n = arr.length;
+
+        // Traversing through all array elements
+        for (var i = 0; i < n; i++) {
+            // Last i elements are already in place, so we don't need to check them
+            for (var j = 0; j < n-i-1; j++) {
+                // Swap if the element found is greater than the next element
+                if (arr[j] < arr[j+1]) {
+                    // Using destructuring assignment to swap elements
+                    [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+                }
+            }
+        }
+    }
+
+    // Khởi tạo mảng
+    var arr = [];
+
+    // Nhập vào 10 phần tử cho mảng
+    for (var i = 0; i < 10; i++) {
+        var element = parseInt(prompt("Nhập phần tử thứ " + (i+1) + ":"));
+        arr.push(element);
+    }
+
+
+    // Sắp xếp mảng giảm dần bằng thuật toán Bubble Sort
+    bubbleSort(arr);
+
+    // Hiển thị mảng sau khi sắp xếp
+    document.write("Mảng sau khi sắp xếp giảm dần:", arr);
+
+</script>
+</body>
+</html>

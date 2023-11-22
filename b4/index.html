@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<script>
+    let arr1 = [];
+    let number1  = +prompt("Nhập số phần tử của mảng");
+    for (let i = 0; i < number1; i++)
+    {
+        arr1[i] = +prompt("Nhâp phần tử thứ "+ i);
+    }
+    let first = 0;
+    let last = arr1.length - 1;
+    while (first<last){
+        let b = arr1[first];
+        arr1[first] = arr1[last];
+        arr1[last] = b;
+        first++;
+        last--;
+    }
+    document.write(arr1);
+</script>
+</body>
+</html>
