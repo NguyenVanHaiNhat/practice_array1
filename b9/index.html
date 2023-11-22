@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>bài 9</title>
 </head>
 <body>
+<script>
+    // Khởi tạo mảng số nguyên a và b gồm 10 phần tử
+    let a = [];
+    let b = [];
 
+    // Nhập giá trị cho mảng a
+    for (let i = 0; i < 10; i++) {
+        let elementA = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng a:"));
+        a.push(elementA);
+    }
+
+    // Nhập giá trị cho mảng b
+    for (let j = 0; j < 10; j++) {
+        let elementB = parseInt(prompt("Nhập phần tử thứ " + (j + 1) + " của mảng b:"));
+        b.push(elementB);
+    }
+
+    // Nối mảng a và b để tạo mảng c
+    let c = a.concat(b);
+
+    // Hiển thị mảng c
+    document.write("Mảng c sau khi nối từ a và b:");
+    document.write(c);
+</script>
 </body>
 </html>
